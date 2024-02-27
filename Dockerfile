@@ -1,4 +1,4 @@
-FROM adoptopenjdk/openjdk17
+FROM adoptopenjdk/openjdk17:latest
 
 COPY ./build/libs/demo-0.0.1-SNAPSHOT.jar app.jar
 
