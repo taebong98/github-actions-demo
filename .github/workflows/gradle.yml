@@ -21,9 +21,9 @@ jobs:
       - name: Docker build & push to prod
         if: contains(github.ref, 'main')
         run: |
-          docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }}
-          docker build -f Dockerfile-dev -t ${{ secrets.DOCKER_USERNAME }}/docker-test-prod .
-          docker push ${{ secrets.DOCKER_USERNAME }}/docker-test-prod
+          docker login -u ${{ secrets.DOCKERHUB_USERNAME }} -p ${{ secrets.DOCKERJUB_PASSWORD }}
+          docker build -f Dockerfile -t ${{ secrets.DOCKERHUB_USERNAME }}/github-actions-demo .
+          docker push ${{ secrets.DOCKERHUB_USERNAME }}/github-actions-demo
 
       - name: Docker build and push to dev
         if: contains(github.ref, 'dev')
