@@ -21,7 +21,7 @@ jobs:
         run: ./gradlew build
 
       - name: 도커이미지 빌드
-        run: docker build -t taebong98/dh-server .
+        run: docker build -t taebong98/github-actions-demo .
 
       - name: Docker Hub 로그인
         uses: docker/login-action@v2
